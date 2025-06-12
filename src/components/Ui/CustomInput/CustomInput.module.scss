@@ -1,0 +1,80 @@
+.custom-input {
+  position: relative;
+
+  :global(.MuiOutlinedInput-root) {
+    border-radius: 5px;
+
+    fieldset {
+      border-color: grey;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    &:hover fieldset {
+      border-color: green;
+      transition: border-color 0.3s ease-in-out;
+    }
+
+    &.Mui-focused fieldset {
+      border-color: green;
+      transition: border-color 0.3s ease-in-out;
+
+      &:active fieldset {
+        border-color: green;
+      }
+    }
+  }
+
+  :global(.MuiOutlinedInput-root.Mui-focused fieldset) {
+    border-color: green;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  :global(.MuiInputLabel-root.MuiInputLabel-shrink) {
+    color: green;
+  }
+
+  :global(.MuiFormHelperText-root) {
+    margin: 0 0 0 10px;
+    position: absolute;
+    top: 60px;
+    left: -10px;
+  }
+}
+
+.custom-input.error {
+  :global(.MuiOutlinedInput-root) {
+    &:hover fieldset,
+    &.Mui-focused fieldset {
+      border-color: red;
+      transition: border-color 0.3s ease-in-out;
+    }
+  }
+
+  :global(.MuiOutlinedInput-root.Mui-focused fieldset) {
+    border-color: red;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  :global(.MuiInputLabel-root.MuiInputLabel-shrink) {
+    color: red;
+  }
+}
+
+@media (max-width: 600px) {
+  .custom-input {
+    :global(.MuiOutlinedInput-root) {
+      height: 40px;
+      font-size: 16px;
+    }
+
+    :global(.MuiInputLabel-root:not(.MuiInputLabel-shrink)) {
+      font-size: 12px;
+      top: -5px;
+    }
+
+    :global(.MuiFormHelperText-root) {
+      font-size: 12px;
+      top: 45px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+const colorMap: Record<string, string> = {
+  A: '#8dd3c7',
+  R: '#ffffb3',
+  N: '#bebada',
+  D: '#fb8072',
+  C: '#80b1d3',
+  E: '#fdb462',
+  Q: '#b3de69',
+  G: '#fccde5',
+  H: '#d9d9d9',
+  I: '#bc80bd',
+  L: '#ccebc5',
+  K: '#ffed6f',
+  M: '#1f78b4',
+  F: '#33a02c',
+  P: '#e31a1c',
+  S: '#ff7f00',
+  T: '#6a3d9a',
+  W: '#b15928',
+  Y: '#a6cee3',
+  V: '#fb9a99',
+  '-': '#ffffff',
+};
+
+export default colorMap;
